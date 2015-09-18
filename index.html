@@ -10,8 +10,9 @@
 
 <style>
 
-body {font-family: 'メイリオ',
-'Hiragino Kaku Gothic Pro', sans-serif}
+body {
+	font-family: 'メイリオ',
+    'Hiragino Kaku Gothic Pro', sans-serif}
 
 a	{color: #017acd}
 
@@ -22,7 +23,9 @@ div#container {
 	margin-right: auto}
 
 /* ヘッダー */
-header#pageheader	{
+header#pageheader 
+    img {-webkit-box-shadow:10px 10px 10px #666666;
+    	box-shadow: 10px 10px 10px #666666}	{
 	background: none;
 	padding: 15px 0 0}
 
@@ -51,7 +54,9 @@ nav ul	{
 	margin-left: 0;
 	padding-left: 0;
 	height: 30px;
-	background-color: #005087}
+	background-color: #333333;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(#777777 0%,#444444 50%,#333333 51%,#555555 10%)}
 
 nav ul li	{
 	list-style-type: none;
@@ -64,7 +69,6 @@ nav ul li a	{
 	text-decoration: none;
 	text-align: center;
 	color: #ffffff;
-	background-color: #005087;
 	border-right: solid 1px #ffffff}
 
 nav ul li a:hover	{
@@ -76,9 +80,14 @@ article	{
 	margin-left: auto;
 	margin-right: auto}
 
-article　header {
-	border: solid 5px #aaaaaa;
-    margin: 20px 0 10px}
+article header{
+	border: solid 1px #aaaaaa;
+    margin: 20px 0 10px;
+    padding: 18px;
+    border-radius: 5px;
+    -webkit-box-shadow: 10px 10px 10px #666666;
+    box-shadow: 10px 10px 10px #666666}
+
 
 article header h1	{
 	background: none;
@@ -86,18 +95,30 @@ article header h1	{
 	color: #000000;
 	line-height: 45px;
 	padding-left: 0;
-	margin-bottom: 0;
-    font-weight: normal}
+	margin: 0;
+    font-weight: normal;
+    float: left;}
 
+article header p{font-size: 16px;
+    color: #444444;
+    margin-left: 300px}
 
-article section {clear: both}   
+article section {clear: both;
+    border: solid 1px #aaaaaa;
+    margin: 20px 0 10px;
+    padding: 18px;
+    border-radius: 5px;
+    overflow: hidden;
+    background: -webkit-gradient(linear,left top,left botten,from(#ffffff),to(#dfdfdf));
+    background: -webkit-linear-gradient(#ffffff 0%, #dfdfdf 100%);
+    box-shadow: 0px 2px 3px #cccccc,0 0 4px 3px #ffffff inset} 
 
 article section h1	{
 	background-color: none;
 	font-size: 24px;
 	line-height: 22px;
 	padding-left: 0;
-	margin-top: 30px;
+	margin-top: 0px;
 	margin-bottom: 20;
 	margin-left: 0;
 	margin-right: 0}
@@ -106,8 +127,8 @@ article p	{
 	font-size: 0.75em;
 	line-height: 1.6;
 	margin-top: 10px;
-	margin-left: 12px;
-	margin-right: 12px}
+	margin-left: 0px;
+	margin-right: 0px}
 
 /* フッター */
 footer	{
@@ -131,12 +152,12 @@ figure {margin: 0}
 article section:nth-of-type(odd) figure	{
 	float: right;
 	margin-left: 15px;
-	margin-bottom: 15px}
+	margin-bottom: 0}
 
 article section:nth-of-type(even) figure {
 	float: left;
 	margin-right: 15px;
-	margin-bottom: 15px}
+	margin-bottom: 0}
 
 article section figcaption {color: #666666;
     font-size: 10px;
@@ -157,9 +178,18 @@ margin-botton: 15px}
 
 </style>
 
-
-
 <![endif]--> 
+
+
+<!--[if lt IE 10]>
+<style>
+article section
+{filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff',endColorstr='#dfdfdf');
+
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff',endColorstr='#dfdfdf')"}
+
+</style>
+<![endif]-->
 
 </head>
 
@@ -199,7 +229,7 @@ margin-botton: 15px}
 	<h1 itemprop="name">森の工房について</h1>
 	
 
-	<p id="summary" itemprop="description">Forest Studioでは、自然の中にある「森の工房」を運営しています。森の工房では、四季を通してイベントを開催したり、さまざまな商品の開発を行っています。</p><br><br>
+	<p id="summary" itemprop="description">Forest Studioでは、自然の中にある「森の工房」を運営しています。森の工房では、四季を通してイベントを開催したり、さまざまな商品の開発を行っています。</p>
 </header>
 
 <div itemprop="articleBody">
@@ -218,7 +248,7 @@ margin-botton: 15px}
 </section>
 
 <section>
-	<br><h1>四季を楽しむことができる場所</h1>
+	<h1>四季を楽しむことができる場所</h1>
 	
 	<figure>
 		<img src="photo02.jpg" alt="冬の風景" width="250" height="165"  />
@@ -231,7 +261,7 @@ margin-botton: 15px}
 
 
 <section>
-	<br><h1>工房のまわりにいる動物たち</h1>
+	<h1>工房のまわりにいる動物たち</h1>
 	
 	<figure>
 		<img src="photo03.jpg" alt="キツネさん" width="250" height="165" class="photo-odd" itemprop="image" />
@@ -246,7 +276,7 @@ margin-botton: 15px}
 </article>
 
 <!-- フッター -->
-<br><br><footer>
+<footer>
 <small>Copyright (C) Green Leaf, All rights reserved.
 </small>
 </footer>
