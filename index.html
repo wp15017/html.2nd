@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>森の工房について</title>
 
+<meta name="viewport" content="width=device-width">
 
 <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
 
@@ -167,7 +168,7 @@ footer	{
     border-top: solid 1px #aaaaaa}
 
 small	{
-	font-size: 0.75em;
+	font-size: 10px;
 	font-style: normal;
 	text-align: left;
     display: block}
@@ -315,8 +316,8 @@ article header h1 {float: none}
 
 article header p {margin: 0}
 
-article section:nth-of-type(1n) figure{
-	float: none;
+article section:nth-of-type(1n) figure
+    {float: none;
 	margin: 0;
     text-align: center;
     display: block}
@@ -341,6 +342,43 @@ margin-botton: 15px}
 nav ul li a {border-right: solid 1px #ffffff}
 
 nav ul li a:hover {background-color: #017acd}
+
+
+/* 3段組み */
+article div[itemprop="articleBody"]
+  {display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box}
+
+article section
+  {width: 288px;
+  margin-right: 18px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  overflow: visible}
+
+article section h1
+  {height: 48px;
+  line-height: 1.2}
+
+article section:nth-of-type(1n) figure
+  {float: none;
+  margin: 0}
+
+article section:nth-of-type(1n) figcaption
+  {text-align: center;
+  margin-bottom: 15px}
+
+/* 3段組み IE8~9 & Opera */
+
+article section 
+  {clear: none;
+  float: left;
+  position: relative}
+
+article section + section + section
+  {margin-right: 0}
 
 </style>
 
