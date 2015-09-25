@@ -32,8 +32,7 @@ div#container {
     background-position: 15px 450px,90px 530px;
     background-size: 94px 94px,30px 30px;
     position: relative;
-    overflow: hidden
-    }
+    overflow: hidden}
 
 /* ヘッダー */
 header#pageheader {
@@ -188,8 +187,7 @@ small::before {content: 'GREEN LEAF';
                -webkit-transform: rotate(-45deg) translate(62px,20px);
                -moz-trasform: rotate(-45deg) translate(62px,20px);
                -o-trasform: rotate(-45deg) translate(62px,20px);
-               -ms-trasform:  rotate(-45deg) translate(62px,20px)
-               }
+               -ms-trasform:  rotate(-45deg) translate(62px,20px)}
 
 
 /* 画像の配置 */
@@ -206,17 +204,24 @@ article section:nth-of-type(even) figure {
 	margin-right: 15px;
 	margin-bottom: 0}
 
-article section figcaption {color: #666666;
+article section figcaption {
+	color: #666666;
     font-size: 10px;
     display: block}
 
 article section:nth-of-type(odd) figcaption{text-align: right}
 
+
+/* ====== PC用の設定 ====== */
+@media only screen and (min-width: 900px){
+
+
 /* 3段組み */
+
 article div[itemprop="articleBody"]{
 	display: -webkit-box;
     display: -moz-box;
-    display: -ms-box}
+    display: -ms-bow}
 
 article section {
 	width: 288px;
@@ -225,6 +230,7 @@ article section {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     overflow: visible}
+    
 
 article section h1 {
 	height: 48px;
@@ -239,15 +245,87 @@ article section:nth-of-type(1n) figcaption {
     margin-bottom:15px}
 
  /* 3段組み　IE8~9 & Opera */
+
  article section {
  	clear: none;
     float: left;
-    position: relative;
-    }
+    position: relative}
 
-    aticle section + section + section {
+article section + section + section {
     margin-right: 0}
 
+}
+
+/* ====== タブレット用の設定 ====== */
+
+@media only screen and (min-width: 600px)
+and (max-width: 899px){
+
+div#container {
+	width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0 10px;
+    background-position: -3px 380px, 100px 460px}
+
+header#pageheader img {
+	width: 100%;
+    height: auto}
+
+nav ul {font-size: 10px}
+
+nav ul li a {width: 100px}
+
+}
+
+
+/* ====== スマートフォン用の設定 ====== */
+
+@media only screen and (max-width: 599px){
+
+div#container {
+	width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0 10px;
+    background-position: -3px 220px 100px 280px}
+
+header#psgeheader img {
+	width: 100%;
+    height: auto}
+
+nav ul {font-size: 8px}
+
+nav ul li a {width: auto;
+    display: inline-block;
+    padding: 0 3px}
+
+header#pageheader h1 {
+	font-size: 24px;
+    margin-right: 15px}
+
+header#pageheader h2 {
+	font-size: 10px;
+	text-align: left;
+	padding: 0}
+
+article header h1 {float: none}
+
+article header p {margin: 0}
+
+article section:nth-of-type(1n) figure{
+	float: none;
+	margin: 0;
+    text-align: center;
+    display: block}
+
+article section:nth-of-type(1n) figcaption{
+	text-align: center;
+	margin-bottom: 15px}
+
+}
 
 </style>
 
@@ -279,9 +357,11 @@ article section
 </style>
 <![endif]-->
 
+
 <!--[if lt IE 8]>
 <style>
-article section {width: 250px}
+article section        {width: 250px}
+
 article section figure {margin-left:0}
 </style>
 <![endif]-->
@@ -352,9 +432,6 @@ article section figure {margin-left:0}
 	<p>森の工房では、春、夏、秋、冬と、四季折々の自然を楽しむことができます。<br />
 	春には、雪解け水の中から芽を出す新しい命や、新緑の鮮やかな緑。夏には、緑濃く茂った木々の間を吹き抜けるさわやかな風に、川の清流での水遊び。秋には、森全体が赤や黄色に染まり、色鮮やかな紅葉に包まれます。木々の葉が落ち、冬になると、ここは雪に覆われて一面の銀世界になります。</p>
 </section>
-</div>
-
-<div itemprop="articleBody">
 
 <section>
 	<h1>工房のまわりにいる動物たち</h1>
