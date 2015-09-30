@@ -330,6 +330,19 @@ article section:nth-of-type(1n) figcaption{
 
 </style>
 
+<script>
+function myimage(){
+  var canvas = document.getElementById('circle');
+  if(canvas.getContext){
+  var ctx = canvas.getContext('2d');
+
+  ctx.arc(17, 17, 17, 0, Math.PI*2, true); //半径14の円を描画
+  ctx.fillStyle = "#" + Math.floor(Math.random()*256*256*256).toString(16); //塗りつぶしの色はランダム
+  ctx.fill(); // 塗りつぶしを実行
+}
+}
+</script>
+
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
 	</script>
@@ -404,9 +417,11 @@ article section figure {margin-left:0}
 </style>
 <![endif]-->
 
+
+
 </head>
 
-<body>
+<body onload="myimage();">
 
 <!-- コンテナ -->
 
@@ -415,8 +430,15 @@ article section figure {margin-left:0}
 <!-- ヘッダー -->
 <header id="pageheader">
 	<h1>
-	<!-- 森の工房サイトの紹介　-->
-	Greeen Leaf</h1>
+	<svg width="34" height="34" xmlns="http://www.w3.org/2000/svg">
+	<circle cx="17" cy="17" r="17" fill="#880000" />
+	<!--[if lt IE 9]></circle><![endif]-->
+	</svg>
+    
+    
+	Greeen Leaf
+	<canvas id="circle" width="34" height="34"></canvas>
+	</h1>
 	<p>生活を楽しくする情報をもっと身近にお届けします</p>
 
 
